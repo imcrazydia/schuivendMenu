@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>inhoud schuif</title>
+    <meta name="author" content="Diaquino Fortmeier, MD1A">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      #toggleMenu:checked ~ main {
+        margin-left: 10em;
+      }
+      #toggleLabel::after {
+        content: "\2630";
+        cursor: pointer;
+      }
+      #toggleMenu:checked ~ main #toggleLabel::after {
+        content: "\2716";
+      }
+
+      nav {
+        position: fixed;
+      }
+
+      main {
+        position: absolute;
+        margin-left: 0;
+        transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+      }
+    </style>
+  </head>
+  <body lang="nl">
+    <input type="checkbox" id="toggleMenu">
+    <nav>
+      <h4>Menu</h4>
+      <ul>
+        <li>
+          <a href="index.html" class="active">inhoud schuift</a>
+        </li>
+        <li>
+          <a href="menu.html">menu schuift</a>
+        </li>
+        <li>
+          <a href="alles.html">alles schuift</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="toggleMenu" id="toggleLabel"></label>
+      <h1>Wattpad</h1>
+      <p><img src="prof.png">
+      </p>
+      <p>Wattpad takes everything you love about storytelling, and turns it into a social, on-the-go experience. The result is a one-of-a-kind adventure in creation and discovery. <br>
+         Today, the global Wattpad community is made up of more than 65 million people. We’re proudly based in Toronto, Canada, but Wattpad stories transcend borders, interests, and language.
+      </p>
+      <h2>A captivated audience</h2>
+      <p>In a world of 7-second attention spans, people everywhere still long to be immersed in content that matters to them. The Wattpad community collectively spends an incredible 15 billion minutes each month using Wattpad.
+      </p>
+      <h2>Freedom to discover and create</h2>
+      <p>Wattpad gives people from around the world access to an audience of millions, and connects them with content they can’t find anywhere else. <br>
+         You can discover the things that speak to you, or choose to create them from scratch. It’s the freedom to express yourself with an authentic voice, and the knowledge that you will be heard
+      </p>
+
+    </main>
+
+  </body>
+</html>
